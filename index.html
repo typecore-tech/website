@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TypeCore</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fenix&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0f;
+    color: #e8e6e3;
+    font-family: 'Fenix', Georgia, serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .logo {
+    height: clamp(60px, 12vw, 120px);
+    opacity: 0;
+    animation: fadein 1.2s ease forwards;
+  }
+
+  .logo img {
+    height: 100%;
+    width: auto;
+  }
+
+  .claim {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #8b95a5;
+    letter-spacing: 0.25em;
+    opacity: 0;
+    animation: fadein 1.2s ease 0.8s forwards;
+  }
+
+  .claim .bracket {
+    color: #e8e6e3;
+  }
+
+  .booting {
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    color: #5a5a72;
+    letter-spacing: 0.3em;
+    opacity: 0;
+    animation: fadein 1s ease 1.6s forwards;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #64748b;
+    vertical-align: text-bottom;
+    margin-left: 0.15em;
+    animation: blink 1s step-end infinite 2.6s;
+    opacity: 0;
+    animation: fadein 0.01s ease 2.6s forwards, blink 1s step-end infinite 2.6s;
+  }
+
+  @keyframes fadein {
+    to { opacity: 1; }
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"><img src="logo-draft-freepik.svg" alt="TypeCore"></div>
+    <div class="claim"><span class="bracket">&lt;</span>capability-native operating system<span class="bracket">&gt;</span></div>
+    <div class="booting">booting...<span class="cursor"></span></div>
+  </div>
+</body>
+</html>
